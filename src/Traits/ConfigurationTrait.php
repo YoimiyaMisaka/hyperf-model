@@ -19,9 +19,9 @@ use Timebug\Model\Exception\TableNotRequiredException;
 trait ConfigurationTrait
 {
     /**
-     * @var InputInterface
+     * @var ?InputInterface
      */
-    protected $input;
+    protected ?InputInterface $input;
 
 
     /**
