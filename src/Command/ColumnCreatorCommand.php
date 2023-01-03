@@ -16,7 +16,7 @@ class ColumnCreatorCommand extends HyperfCommand
 {
     use ConfigurationTrait;
 
-    protected $name = "creator:column";
+    protected ?string $name = "creator:column";
 
     public function configure()
     {

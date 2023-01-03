@@ -16,7 +16,7 @@ class ModelCreatorCommand extends HyperfCommand
 {
     use ConfigurationTrait;
 
-    protected $name = "creator:model";
+    protected ?string $name = "creator:model";
 
     public function configure()
     {
