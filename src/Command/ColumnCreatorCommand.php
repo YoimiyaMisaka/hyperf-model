@@ -9,12 +9,10 @@ use Symfony\Component\Console\Input\InputOption;
 use Timebug\Model\Exception\ClassInvalidException;
 use Timebug\Model\Exception\TableInvalidException;
 use Timebug\Model\Exception\TableNotRequiredException;
-use Timebug\Model\Traits\ConfigurationTrait;
 
 #[Command]
 class ColumnCreatorCommand extends HyperfCommand
 {
-    use ConfigurationTrait;
 
     protected ?string $name = "creator:column";
 
