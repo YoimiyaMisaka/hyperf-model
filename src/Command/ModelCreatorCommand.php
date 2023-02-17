@@ -184,9 +184,11 @@ EOF;
      */
     protected function getDatabase(ModelConfig $config): string
     {
-        $db = $this->input->hasOption('database')
-            ? $this->input->getOption('database')
-            : $config->getDatabase();
+        $db = $config->getDatabase();
+        if ($this->input->hasOption('database')) {
+            $optDb = $this->input->getOption('database');
+            $optDb && $db = $optDb;
+        }
 
         if ($db == '') {
             throw new DatabaseInvalidException("Invalid Database.");
