@@ -97,7 +97,7 @@ $constants
 }
 
 EOF;
-        $path = ltrim(BASE_PATH . '/' . $path, '/');
+        $path = rtrim(BASE_PATH . '/' . $path, '/');
         is_dir($path) || mkdir($path);
         $filename = $path . '/' . $className . '.php';
         file_exists($filename) || file_put_contents($filename, $template);

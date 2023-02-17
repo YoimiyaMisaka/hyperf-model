@@ -118,7 +118,7 @@ class {$className} extends BaseModel
 
 EOF;
 
-        $targetPath = ltrim(BASE_PATH . '/' . $path, '/');
+        $targetPath = rtrim(BASE_PATH . '/' . $path, '/');
         if (!is_dir($targetPath)) {
             mkdir($targetPath);
         }
