@@ -97,9 +97,9 @@ $constants
 }
 
 EOF;
-        $path = BASE_PATH . '/' . $path;
+        $path = ltrim(BASE_PATH . '/' . $path, '/');
         is_dir($path) || mkdir($path);
-        $filename = $path . $className . '.php';
+        $filename = $path . '/' . $className . '.php';
         file_exists($filename) || file_put_contents($filename, $template);
         $this->info("create $filename successfully.");
         return $template;
