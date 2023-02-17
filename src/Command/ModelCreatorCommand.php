@@ -113,7 +113,7 @@ namespace {$namespace};
 {$props}
 class {$className} extends BaseModel
 {
-    protected \$table = '{$tableName}';
+    protected ?string \$table = '{$tableName}';
 }
 
 EOF;
